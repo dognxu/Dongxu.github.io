@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX教授 - 材料科学与工程</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #3498db;
+            border-radius: 4px;
+        }
+
+        /* 主体内容 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 个人简介 */
+        .profile {
+            text-align: center;
+            padding: 3rem 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 5px solid #2c3e50;
+        }
+
+        /* 研究领域卡片 */
+        .research-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 论文列表 */
+        .publications li {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-left: 4px solid #3498db;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#research">研究领域</a></li>
+            <li><a href="#publications">论文成果</a></li>
+            <li><a href="#teaching">教学</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 个人简介 -->
+    <section class="profile" id="home">
+        <div class="container">
+            <img src="your-photo.jpg" alt="XXX教授">
+            <h1>XXX 教授</h1>
+            <p>材料科学与工程学院</p>
+            <p>XX大学</p>
+            <div style="margin-top: 1rem;">
+                <a href="CV.pdf" class="button">下载简历</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究领域 -->
+    <section class="container" id="research">
+        <h2>研究领域</h2>
+        <div class="research-cards">
+            <div class="card">
+                <h3>无铅压电材料</h3>
+                <p>钛酸铋钠基陶瓷的缺陷工程与极化动力学研究</p>
+            </div>
+            <div class="card">
+                <h3>介电储能材料</h3>
+                <p>低电场高储能密度材料的设计与器件集成</p>
+            </div>
+            <div class="card">
+                <h3>柔性电子器件</h3>
+                <p>基于功能陶瓷的柔性传感器开发</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 论文成果 -->
+    <section class="container" id="publications">
+        <h2>代表性论文</h2>
+        <ul class="publications">
+            <li>
+                <strong>Defect Engineering in NBT-based Ceramics</strong><br>
+                Nature Materials, 2023 (通讯作者)<br>
+                DOI: 10.1038/s41563-023-01598-x
+            </li>
+            <li>
+                <strong>Low-Field Energy Storage Enhancement</strong><br>
+            Advanced Functional Materials, 2022 (第一作者)<br>
+                DOI: 10.1002/adfm.202207890
+            </li>
+        </ul>
+    </section>
+
+    <!-- 教学 -->
+    <section class="container" id="teaching">
+        <h2>教学课程</h2>
+        <div class="card">
+            <h3>《先进功能材料》</h3>
+            <p>研究生课程，系统讲解铁电/压电材料的设计原理与应用</p>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <footer id="contact">
+        <div class="contact-icons">
+            <a href="mailto:your.email@university.edu"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=XXXXX"><i class="fab fa-google-scholar"></i></a>
+            <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
+        </div>
+        <p style="margin-top: 1rem;">地址：XX大学材料学院，XX市XX路123号</p>
+        <p>电话：+86-XXX-XXXX-XXXX</p>
+    </footer>
+</body>
+</html>
